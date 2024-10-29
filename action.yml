@@ -1,0 +1,18 @@
+name: 'cargo-publish-action'
+description: 'GitHub Action to automate publishing Rust crates to crates.io with ease.'
+branding:
+  icon: 'arrow-up-circle'
+  color: 'blue'
+inputs:
+  DIR: 
+    description: 'Crate package dirname'
+    required: false
+    default: "/"
+  TAG_PREFIX:
+    description: "The tag prefix to be generated"
+    required: false
+    default: ""
+
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/trinhminhtriet/cargo-publish-action:v0.1.0'
